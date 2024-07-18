@@ -1,0 +1,20 @@
+{
+  "name": "@baicie/atomico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.jsx",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atomico": "^1.79.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <my-component name="baice"> 
+      <div slot="de">default</div>
+      <div slot="pre">preslot</div>
+    </my-component>
+    <script type="module">
+      import { c, html } from "https://unpkg.com/atomico"; // 4.0kB
+
+      function component({ name }) {
+        return html`<host  >
+          <slot name="pre"></slot>
+          Hello, ${name}
+          <slot name="de"></slot>
+          </host>`;
+      }
+
+      component.props = {
+        name: String,
+      };
+
+      customElements.define("my-component", c(component));
+    </script>
+  </body>
+</html>
