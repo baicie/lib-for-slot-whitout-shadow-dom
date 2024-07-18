@@ -1,5 +1,18 @@
 import register from "preact-custom-element";
 
-const Greeting = ({ name = "World" }) => <p>Hello, {name}!</p>;
+function TextSection({ heading, content2, content }) {
+  console.log(heading, content, content2);
 
-register(Greeting, "x-greeting", ["name"], { shadow: false });
+  return (
+    <div>
+      <h1>{heading}</h1>
+      <p>{content2}</p>
+      <h2>{content}</h2>
+    </div>
+  );
+}
+
+register(TextSection, "text-section", ["heading", "content2", "content"], {
+  shadow: false,
+  mode: "open",
+});

@@ -1,13 +1,14 @@
 import { useState } from "preact/hooks";
-import preactLogo from "./assets/preact.svg";
-import viteLogo from "/vite.svg";
-
 export function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <x-greeting>x-greeting-hello</x-greeting>
+      <text-section
+        heading={<span>Nice heading</span>}
+        content2={<span>Great content2</span>}
+        content={<span>Awesome content content</span>}
+      ></text-section>
     </>
   );
 }
